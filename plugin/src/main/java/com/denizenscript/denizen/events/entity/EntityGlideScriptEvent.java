@@ -14,7 +14,7 @@ public class EntityGlideScriptEvent extends BukkitScriptEvent implements Listene
 
     // <--[event]
     // @Events
-    // <entity> toggles|starts|stops gliding
+    // <entity> toggles|starts|stops flying like superman
     //
     // @Group Entity
     //
@@ -35,7 +35,7 @@ public class EntityGlideScriptEvent extends BukkitScriptEvent implements Listene
     // -->
 
     public EntityGlideScriptEvent() {
-        registerCouldMatcher("<entity> toggles|starts|stops gliding");
+        registerCouldMatcher("<entity> toggles|starts|stops flying like superman");
     }
 
     public EntityTag entity;

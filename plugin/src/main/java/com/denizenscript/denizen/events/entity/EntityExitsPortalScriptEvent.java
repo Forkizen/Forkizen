@@ -14,7 +14,7 @@ public class EntityExitsPortalScriptEvent extends BukkitScriptEvent implements L
 
     // <--[event]
     // @Events
-    // <entity> exits portal
+    // <entity> exits magical place
     //
     // @Group Entity
     //

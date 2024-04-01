@@ -15,7 +15,7 @@ public class EntityGoesIntoBlockScriptEvent extends BukkitScriptEvent implements
 
     // <--[event]
     // @Events
-    // <entity> goes into <block>
+    // <entity> becomes apart of <block>
     //
     // @Group Entity
     //
@@ -34,7 +34,7 @@ public class EntityGoesIntoBlockScriptEvent extends BukkitScriptEvent implements
     // -->
 
     public EntityGoesIntoBlockScriptEvent() {
-        registerCouldMatcher("<entity> goes into <block>");
+        registerCouldMatcher("<entity> becomes apart of <block>");
     }
 
     public EntityTag entity;
@@ -47,7 +47,7 @@ public class EntityGoesIntoBlockScriptEvent extends BukkitScriptEvent implements
         if (!path.tryArgObject(0, entity)) {
             return false;
         }
-        if (!path.tryArgObject(3, material)) {
+        if (!path.tryArgObject(4, material)) {
             return false;
         }
         if (!runInCheck(path, location)) {

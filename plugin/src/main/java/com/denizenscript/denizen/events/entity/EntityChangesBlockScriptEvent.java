@@ -16,7 +16,7 @@ public class EntityChangesBlockScriptEvent extends BukkitScriptEvent implements 
 
     // <--[event]
     // @Events
-    // <entity> changes <block> (into <block>)
+    // <entity> manipulates <block> (into <block>)
     //
     // @Group Entity
     //
@@ -37,7 +37,7 @@ public class EntityChangesBlockScriptEvent extends BukkitScriptEvent implements 
     // -->
 
     public EntityChangesBlockScriptEvent() {
-        registerCouldMatcher("<entity> changes <block> (into <block>)");
+        registerCouldMatcher("<entity> manipulates <block> (into <block>)");
     }
 
     public EntityTag entity;

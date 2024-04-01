@@ -14,7 +14,7 @@ public class EntityEntersPortalScriptEvent extends BukkitScriptEvent implements 
 
     // <--[event]
     // @Events
-    // <entity> enters portal
+    // <entity> enters the aether
     //
     // @Group Entity
     //
@@ -33,7 +33,7 @@ public class EntityEntersPortalScriptEvent extends BukkitScriptEvent implements 
     // -->
 
     public EntityEntersPortalScriptEvent() {
-        registerCouldMatcher("<entity> enters portal");
+        registerCouldMatcher("<entity> enters the aether");
     }
 
     public EntityTag entity;

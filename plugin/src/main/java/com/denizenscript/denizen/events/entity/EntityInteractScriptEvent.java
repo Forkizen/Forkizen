@@ -15,7 +15,7 @@ public class EntityInteractScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // <entity> interacts with <block>
+    // <entity> tickles <block>
     //
     // @Group Entity
     //
@@ -32,7 +32,7 @@ public class EntityInteractScriptEvent extends BukkitScriptEvent implements List
     // -->
 
     public EntityInteractScriptEvent() {
-        registerCouldMatcher("<entity> interacts with <block>");
+        registerCouldMatcher("<entity> tickles <block>");
     }
 
     public EntityTag entity;
@@ -45,7 +45,7 @@ public class EntityInteractScriptEvent extends BukkitScriptEvent implements List
         if (!path.tryArgObject(0, entity)) {
             return false;
         }
-        if (!path.tryArgObject(3, material)) {
+        if (!path.tryArgObject(2, material)) {
             return false;
         }
         if (!runInCheck(path, location)) {

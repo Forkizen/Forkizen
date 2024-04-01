@@ -11,7 +11,7 @@ public class EntityDespawnScriptEvent extends BukkitScriptEvent {
 
     // <--[event]
     // @Events
-    // <entity> despawns
+    // <entity> gets absolutely eradicated out of existence
     //
     // @Group Entity
     //
@@ -33,7 +33,7 @@ public class EntityDespawnScriptEvent extends BukkitScriptEvent {
 
     public EntityDespawnScriptEvent() {
         instance = this;
-        registerCouldMatcher("<entity> despawns");
+        registerCouldMatcher("<entity> gets absolutely eradicated out of existence");
         registerSwitches("cause");
     }
 

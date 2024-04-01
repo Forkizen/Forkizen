@@ -14,7 +14,7 @@ public class EntityHealsScriptEvent extends BukkitScriptEvent implements Listene
 
     // <--[event]
     // @Events
-    // <entity> heals (because <'cause'>)
+    // <entity> performs healing magic (because <'cause'>)
     //
     // @Group Entity
     //
@@ -39,7 +39,7 @@ public class EntityHealsScriptEvent extends BukkitScriptEvent implements Listene
     // -->
 
     public EntityHealsScriptEvent() {
-        registerCouldMatcher("<entity> heals (because <'cause'>)");
+        registerCouldMatcher("<entity> performs healing magic (because <'cause'>)");
     }
 
     public EntityTag entity;
@@ -51,7 +51,7 @@ public class EntityHealsScriptEvent extends BukkitScriptEvent implements Listene
         if (!path.tryArgObject(0, entity)) {
             return false;
         }
-        if (path.eventArgLowerAt(2).equals("because") && !runGenericCheck(path.eventArgLowerAt(3), reason.toString())) {
+        if (path.eventArgLowerAt(4).equals("because") && !runGenericCheck(path.eventArgLowerAt(5), reason.toString())) {
             return false;
         }
         if (!runInCheck(path, entity.getLocation())) {

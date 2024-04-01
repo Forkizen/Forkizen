@@ -14,7 +14,7 @@ public class BlockFallsScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <block> falls
+    // <block> splats
     //
     // @Group Block
     //
@@ -33,7 +33,7 @@ public class BlockFallsScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public BlockFallsScriptEvent() {
-        registerCouldMatcher("<block> falls");
+        registerCouldMatcher("<block> splats");
     }
 
 

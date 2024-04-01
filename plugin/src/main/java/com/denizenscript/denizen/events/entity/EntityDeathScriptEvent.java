@@ -26,7 +26,7 @@ public class EntityDeathScriptEvent extends BukkitScriptEvent implements Listene
 
     // <--[event]
     // @Events
-    // <entity> dies|death
+    // <entity> restinpizzas|restinpieces
     //
     // @Cancellable true
     //
@@ -66,7 +66,7 @@ public class EntityDeathScriptEvent extends BukkitScriptEvent implements Listene
     // -->
 
     public EntityDeathScriptEvent() {
-        registerCouldMatcher("<entity> dies|death");
+        registerCouldMatcher("<entity> restinpizzas|restinpieces");
         registerSwitches("by", "cause");
     }
 

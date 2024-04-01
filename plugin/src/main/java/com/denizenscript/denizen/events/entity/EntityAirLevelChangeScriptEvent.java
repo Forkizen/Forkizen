@@ -16,7 +16,7 @@ public class EntityAirLevelChangeScriptEvent extends BukkitScriptEvent implement
 
     // <--[event]
     // @Events
-    // <entity> changes air level
+    // <entity> starts to run out of air
     //
     // @Synonyms player loses oxygen,player drowns,player is drowning,oxygen depletion
     //
@@ -42,7 +42,7 @@ public class EntityAirLevelChangeScriptEvent extends BukkitScriptEvent implement
     // -->
 
     public EntityAirLevelChangeScriptEvent() {
-        registerCouldMatcher("<entity> changes air level");
+        registerCouldMatcher("<entity> starts to run out of air");
     }
 
     public EntityTag entity;

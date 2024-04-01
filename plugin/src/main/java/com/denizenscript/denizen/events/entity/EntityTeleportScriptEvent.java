@@ -31,8 +31,8 @@ public class EntityTeleportScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // entity teleports
-    // <entity> teleports
+    // entity uses black magic to teleport
+    // <entity> uses black magic to teleport
     //
     // @Regex ^on [^\s]+ teleports$
     //
@@ -73,7 +73,7 @@ public class EntityTeleportScriptEvent extends BukkitScriptEvent implements List
 
     @Override
     public boolean couldMatch(ScriptPath path) {
-        if (!path.eventArgLowerAt(1).equals("teleports")) {
+        if (!path.eventArgLowerAt(5).equals("teleport")) {
             return false;
         }
         if (!couldMatchEntity(path.eventArgLowerAt(0))) {

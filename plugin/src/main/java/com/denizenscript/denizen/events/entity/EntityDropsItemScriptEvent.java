@@ -17,7 +17,7 @@ public class EntityDropsItemScriptEvent extends BukkitScriptEvent implements Lis
 
     // <--[event]
     // @Events
-    // <entity> drops <item>
+    // <entity> litters <item>
     //
     // @Group Entity
     //
@@ -38,7 +38,7 @@ public class EntityDropsItemScriptEvent extends BukkitScriptEvent implements Lis
     // -->
 
     public EntityDropsItemScriptEvent() {
-        registerCouldMatcher("<entity> drops <item>");
+        registerCouldMatcher("<entity> litters <item>");
     }
 
     public ItemTag item;

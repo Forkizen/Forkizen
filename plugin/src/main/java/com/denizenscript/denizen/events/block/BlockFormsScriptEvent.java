@@ -12,7 +12,7 @@ public class BlockFormsScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <block> forms
+    // <block> lives
     //
     // @Group Block
     //
@@ -29,7 +29,7 @@ public class BlockFormsScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public BlockFormsScriptEvent() {
-        registerCouldMatcher("<block> forms");
+        registerCouldMatcher("<block> lives");
     }
 
     public LocationTag location;

@@ -28,7 +28,7 @@ public class AreaEnterExitScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // <entity> enters|exits <area>
+    // <entity> moonwalks in|moonwalks out <area>
     //
     // @Group Entity
     //
@@ -50,7 +50,7 @@ public class AreaEnterExitScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public AreaEnterExitScriptEvent() {
-        registerCouldMatcher("<entity> enters|exits <area>");
+        registerCouldMatcher("<entity> moonwalks in|moonwalks out <area>");
     }
 
 
@@ -61,13 +61,13 @@ public class AreaEnterExitScriptEvent extends BukkitScriptEvent implements Liste
 
     @Override
     public boolean matches(ScriptPath path) {
-        if (isEntering && !path.eventArgLowerAt(1).equals("enters")) {
+        if (isEntering && !path.eventArgLowerAt(2).equals("in")) {
             return false;
         }
-        if (!isEntering && !path.eventArgLowerAt(1).equals("exits")) {
+        if (!isEntering && !path.eventArgLowerAt(2).equals("out")) {
             return false;
         }
-        String areaName = path.eventArgLowerAt(2);
+        String areaName = path.eventArgLowerAt(3);
         if (areaName.equals("notable")) { // TODO: Deprecate?
             areaName = path.eventArgLowerAt(3);
         }

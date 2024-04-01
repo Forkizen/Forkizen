@@ -25,8 +25,8 @@ public class EntityShootsBowScriptEvent extends BukkitScriptEvent implements Lis
 
     // <--[event]
     // @Events
-    // entity shoots bow
-    // <entity> shoots <item>
+    // entity bowsandarrows
+    // <entity> bowsandarrows <item>
     //
     // @Group Entity
     //
@@ -55,7 +55,7 @@ public class EntityShootsBowScriptEvent extends BukkitScriptEvent implements Lis
     // -->
 
     public EntityShootsBowScriptEvent() {
-        registerCouldMatcher("<entity> shoots <item>");
+        registerCouldMatcher("<entity> bowsandarrows <item>");
     }
 
     public EntityTag entity;

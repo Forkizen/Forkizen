@@ -15,7 +15,7 @@ public class EntityBreedScriptEvent extends BukkitScriptEvent implements Listene
 
     // <--[event]
     // @Events
-    // <entity> breeds
+    // <entity> makes love
     //
     // @Group Entity
     //
@@ -39,7 +39,7 @@ public class EntityBreedScriptEvent extends BukkitScriptEvent implements Listene
     // -->
 
     public EntityBreedScriptEvent() {
-        registerCouldMatcher("<entity> breeds");
+        registerCouldMatcher("<entity> makes love");
     }
 
     private EntityTag entity;

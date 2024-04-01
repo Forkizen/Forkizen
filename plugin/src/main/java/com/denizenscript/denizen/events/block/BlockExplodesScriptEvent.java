@@ -18,7 +18,7 @@ public class BlockExplodesScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // <block> explodes
+    // <block> booms
     //
     // @Group Block
     //
@@ -40,7 +40,7 @@ public class BlockExplodesScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public BlockExplodesScriptEvent() {
-        registerCouldMatcher("<block> explodes");
+        registerCouldMatcher("<block> booms");
     }
 
     public BlockExplodeEvent event;

@@ -18,7 +18,7 @@ public class EntitySpawnScriptEvent extends BukkitScriptEvent implements Listene
 
     // <--[event]
     // @Events
-    // <entity> spawns (because <'cause'>)
+    // <entity> comes to life (because <'cause'>)
     //
     // @Group Entity
     //
@@ -39,7 +39,7 @@ public class EntitySpawnScriptEvent extends BukkitScriptEvent implements Listene
     // -->
 
     public EntitySpawnScriptEvent() {
-        registerCouldMatcher("<entity> spawns (because <'cause'>)");
+        registerCouldMatcher("<entity> comes to life (because <'cause'>)");
     }
 
     public EntityTag entity;
@@ -63,7 +63,7 @@ public class EntitySpawnScriptEvent extends BukkitScriptEvent implements Listene
         if (!path.tryArgObject(0, entity)) {
             return false;
         }
-        if (path.eventArgLowerAt(2).equals("because") && !runGenericCheck(path.eventArgLowerAt(3), reason.toString())) {
+        if (path.eventArgLowerAt(4).equals("because") && !runGenericCheck(path.eventArgLowerAt(5), reason.toString())) {
             return false;
         }
         if (!runInCheck(path, location)) {

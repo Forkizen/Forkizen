@@ -16,8 +16,8 @@ public class EntityPotionEffectScriptEvent extends BukkitScriptEvent implements 
 
     // <--[event]
     // @Events
-    // <entity> potion effects modified
-    // <entity> potion effects <'change_action'>
+    // <entity> magic potion modified
+    // <entity> magic potion <'change_action'>
     //
     // @Group Entity
     //
@@ -48,8 +48,8 @@ public class EntityPotionEffectScriptEvent extends BukkitScriptEvent implements 
     // -->
 
     public EntityPotionEffectScriptEvent() {
-        registerCouldMatcher("<entity> potion effects modified");
-        registerCouldMatcher("<entity> potion effects <'change_action'>");
+        registerCouldMatcher("<entity> magic potion modified");
+        registerCouldMatcher("<entity> magic potion <'change_action'>");
         registerSwitches("cause", "effect");
     }
 

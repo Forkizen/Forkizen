@@ -15,8 +15,8 @@ public class PistonRetractsScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // piston retracts
-    // <block> retracts
+    // piston shrinks
+    // <block> shrinks
     //
     // @Group Block
     //

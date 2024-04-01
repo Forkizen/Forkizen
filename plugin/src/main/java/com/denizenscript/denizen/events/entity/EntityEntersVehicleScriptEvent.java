@@ -16,7 +16,7 @@ public class EntityEntersVehicleScriptEvent extends BukkitScriptEvent implements
 
     // <--[event]
     // @Events
-    // entity enters vehicle
+    // entity enters car
     // <entity> enters <entity>
     //
     // @Group Entity

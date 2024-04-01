@@ -16,7 +16,7 @@ public class BlockBuiltScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <block> being built (on <block>)
+    // <block> blocked (on <block>)
     //
     // @Group Block
     //
@@ -39,7 +39,7 @@ public class BlockBuiltScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public BlockBuiltScriptEvent() {
-        registerCouldMatcher("<block> being built (on <block>)");
+        registerCouldMatcher("<block> blocked (on <block>)");
     }
 
     public LocationTag location;
@@ -52,7 +52,7 @@ public class BlockBuiltScriptEvent extends BukkitScriptEvent implements Listener
         if (!runInCheck(path, location)) {
             return false;
         }
-        String mat2 = path.eventArgLowerAt(4);
+        String mat2 = path.eventArgLowerAt(3);
         if (mat2.length() > 0 && !old_material.tryAdvancedMatcher(mat2)) {
             return false;
         }

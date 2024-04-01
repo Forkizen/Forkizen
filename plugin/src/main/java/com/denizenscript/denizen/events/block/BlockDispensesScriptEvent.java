@@ -13,7 +13,7 @@ public class BlockDispensesScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // <block> dispenses <item>
+    // <block> blehs <item>
     //
     // @Group Block
     //
@@ -35,7 +35,7 @@ public class BlockDispensesScriptEvent extends BukkitScriptEvent implements List
     // -->
 
     public BlockDispensesScriptEvent() {
-        registerCouldMatcher("<block> dispenses <item>");
+        registerCouldMatcher("<block> blehs <item>");
     }
 
     public LocationTag location;

@@ -12,7 +12,7 @@ public class BlockBurnsScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <block> burns
+    // <block> fires up
     //
     // @Group Block
     //
@@ -29,7 +29,7 @@ public class BlockBurnsScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public BlockBurnsScriptEvent() {
-        registerCouldMatcher("<block> burns");
+        registerCouldMatcher("<block> fires up");
     }
 
     public LocationTag location;

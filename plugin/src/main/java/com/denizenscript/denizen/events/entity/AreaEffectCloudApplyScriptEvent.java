@@ -13,7 +13,7 @@ public class AreaEffectCloudApplyScriptEvent extends BukkitScriptEvent implement
 
     // <--[event]
     // @Events
-    // area effect cloud applies
+    // cloud thing casts magic
     //
     // @Group Entity
     //
@@ -34,7 +34,7 @@ public class AreaEffectCloudApplyScriptEvent extends BukkitScriptEvent implement
     // -->
 
     public AreaEffectCloudApplyScriptEvent() {
-        registerCouldMatcher("area effect cloud applies");
+        registerCouldMatcher("cloud thing casts magic");
         this.<AreaEffectCloudApplyScriptEvent, ListTag>registerDetermination("affected_entities", ListTag.class, (evt, context, list) -> {
             evt.event.getAffectedEntities().clear();
             for (EntityTag entity : list.filter(EntityTag.class, context)) {

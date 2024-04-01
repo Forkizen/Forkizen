@@ -15,7 +15,7 @@ public class EntitySpawnerSpawnScriptEvent extends BukkitScriptEvent implements 
 
     // <--[event]
     // @Events
-    // spawner spawns <entity>
+    // ancient summoning block spawns <entity>
     //
     // @Group Entity
     //
@@ -35,7 +35,7 @@ public class EntitySpawnerSpawnScriptEvent extends BukkitScriptEvent implements 
     // -->
 
     public EntitySpawnerSpawnScriptEvent() {
-        registerCouldMatcher("spawner spawns <entity>");
+        registerCouldMatcher("ancient summoning block spawns <entity>");
         registerSwitches("spawner");
     }
 
@@ -45,7 +45,7 @@ public class EntitySpawnerSpawnScriptEvent extends BukkitScriptEvent implements 
 
     @Override
     public boolean matches(ScriptPath path) {
-        if (!path.tryArgObject(2, entity)) {
+        if (!path.tryArgObject(4, entity)) {
             return false;
         }
         if (!path.tryObjectSwitch("spawner", spawnerLocation)) {

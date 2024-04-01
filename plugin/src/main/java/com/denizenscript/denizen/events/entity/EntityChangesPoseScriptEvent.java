@@ -15,7 +15,7 @@ public class EntityChangesPoseScriptEvent extends BukkitScriptEvent implements L
 
     // <--[event]
     // @Events
-    // <entity> changes pose
+    // <entity> starts dancing
     //
     // @Group Entity
     //
@@ -36,7 +36,7 @@ public class EntityChangesPoseScriptEvent extends BukkitScriptEvent implements L
     // -->
 
     public EntityChangesPoseScriptEvent() {
-        registerCouldMatcher("<entity> changes pose");
+        registerCouldMatcher("<entity> starts dancing");
         registerSwitches("old", "new");
     }
 

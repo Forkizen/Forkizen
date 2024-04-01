@@ -21,9 +21,9 @@ public class EntityKilledScriptEvent extends BukkitScriptEvent implements Listen
 
     // <--[event]
     // @Events
-    // <entity> killed (by <'cause'>)
-    // <entity> killed (by <entity>)
-    // <entity> kills <entity>
+    // <entity> liquidated (by <'cause'>)
+    // <entity> liquidated (by <entity>)
+    // <entity> liquidates <entity>
     //
     // @Group Entity
     //
@@ -54,9 +54,9 @@ public class EntityKilledScriptEvent extends BukkitScriptEvent implements Listen
     // -->
 
     public EntityKilledScriptEvent() {
-        registerCouldMatcher("<entity> killed (by <'cause'>)");
-        registerCouldMatcher("<entity> killed (by <entity>)");
-        registerCouldMatcher("<entity> kills <entity>");
+        registerCouldMatcher("<entity> liquidated (by <'cause'>)");
+        registerCouldMatcher("<entity> liquidated (by <entity>)");
+        registerCouldMatcher("<entity> liquidates <entity>");
     }
 
 

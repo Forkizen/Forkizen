@@ -15,8 +15,8 @@ public class PistonExtendsScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // piston extends
-    // <block> extends
+    // piston expands
+    // <block> expands
     //
     // @Group Block
     //

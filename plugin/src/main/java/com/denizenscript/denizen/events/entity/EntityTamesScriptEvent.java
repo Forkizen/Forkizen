@@ -14,10 +14,10 @@ public class EntityTamesScriptEvent extends BukkitScriptEvent implements Listene
 
     // <--[event]
     // @Events
-    // entity tamed
-    // <entity> tamed
-    // player tames entity
-    // player tames <entity>
+    // entity calmed down and domesticated
+    // <entity> calmed down and domesticated
+    // player calms down and tames entity
+    // player calms down and tames <entity>
     //
     // @Regex ^on [^\s]+ (tames [^\s]+|tamed)$
     //
@@ -46,7 +46,7 @@ public class EntityTamesScriptEvent extends BukkitScriptEvent implements Listene
 
     @Override
     public boolean couldMatch(ScriptPath path) {
-        if (!path.eventArgLowerAt(1).equals("tames") && !path.eventArgLowerAt(1).equals("tamed")) {
+        if (!path.eventArgLowerAt(4).equals("tames") && !path.eventArgLowerAt(4).equals("tamed")) {
             return false;
         }
         if (!couldMatchEntity(path.eventArgLowerAt(0))) {

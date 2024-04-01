@@ -14,7 +14,7 @@ public class BlockGrowsScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <block> grows
+    // <block> beanstalks
     //
     // @Group Block
     //
@@ -32,7 +32,7 @@ public class BlockGrowsScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public BlockGrowsScriptEvent() {
-        registerCouldMatcher("<block> grows");
+        registerCouldMatcher("<block> beanstalks");
         registerSwitches("from", "to");
     }
 

@@ -13,7 +13,7 @@ public class BlockShearEntityScriptEvent extends BukkitScriptEvent implements Li
 
     // <--[event]
     // @Events
-    // <block> shears <entity>
+    // <block> snips <entity>
     //
     // @Group Block
     //
@@ -31,7 +31,7 @@ public class BlockShearEntityScriptEvent extends BukkitScriptEvent implements Li
     // -->
 
     public BlockShearEntityScriptEvent() {
-        registerCouldMatcher("<block> shears <entity>");
+        registerCouldMatcher("<block> snips <entity>");
     }
 
     public LocationTag location;

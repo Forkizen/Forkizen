@@ -19,7 +19,7 @@ public class BlockPhysicsScriptEvent extends BukkitScriptEvent implements Listen
 
     // <--[event]
     // @Events
-    // <block> physics
+    // <block> newtons
     //
     // @Group Block
     //
@@ -40,7 +40,7 @@ public class BlockPhysicsScriptEvent extends BukkitScriptEvent implements Listen
     // -->
 
     public BlockPhysicsScriptEvent() {
-        registerCouldMatcher("<block> physics");
+        registerCouldMatcher("<block> newtons");
         registerSwitches("adjacent");
     }
 

@@ -14,7 +14,7 @@ public class FurnaceStartsSmeltingScriptEvent extends BukkitScriptEvent implemen
 
     // <--[event]
     // @Events
-    // furnace starts smelting <item>
+    // furnace starts fooding <item>
     //
     // @Group Block
     //
@@ -43,7 +43,7 @@ public class FurnaceStartsSmeltingScriptEvent extends BukkitScriptEvent implemen
     // -->
 
     public FurnaceStartsSmeltingScriptEvent() {
-        registerCouldMatcher("furnace starts smelting <item>");
+        registerCouldMatcher("furnace starts fooding <item>");
     }
 
     public ItemTag item;

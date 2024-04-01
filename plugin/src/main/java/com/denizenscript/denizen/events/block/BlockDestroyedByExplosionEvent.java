@@ -18,7 +18,7 @@ public class BlockDestroyedByExplosionEvent extends BukkitScriptEvent implements
 
     // <--[event]
     // @Events
-    // <block> destroyed by explosion
+    // <block> boomed
     //
     // @Group Block
     //
@@ -42,7 +42,7 @@ public class BlockDestroyedByExplosionEvent extends BukkitScriptEvent implements
     // -->
 
     public BlockDestroyedByExplosionEvent() {
-        registerCouldMatcher("<block> destroyed by explosion");
+        registerCouldMatcher("<block> boomed");
         registerSwitches("source_entity", "source_block");
     }
 

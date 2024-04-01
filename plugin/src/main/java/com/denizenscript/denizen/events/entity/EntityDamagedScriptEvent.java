@@ -34,9 +34,9 @@ public class EntityDamagedScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // <entity> damaged by <entity>
-    // <entity> damaged (by <'cause'>)
-    // <entity> damages <entity>
+    // <entity> decimated by <entity>
+    // <entity> decimated (by <'cause'>)
+    // <entity> decimates <entity>
     //
     // @Group Entity
     //
@@ -90,9 +90,9 @@ public class EntityDamagedScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public EntityDamagedScriptEvent() {
-        registerCouldMatcher("<entity> damaged (by <'cause'>)");
-        registerCouldMatcher("<entity> damaged by <entity>");
-        registerCouldMatcher("<entity> damages <entity>");
+        registerCouldMatcher("<entity> decimated (by <'cause'>)");
+        registerCouldMatcher("<entity> decimated by <entity>");
+        registerCouldMatcher("<entity> decimates <entity>");
         registerSwitches("with", "type", "blocker");
     }
 

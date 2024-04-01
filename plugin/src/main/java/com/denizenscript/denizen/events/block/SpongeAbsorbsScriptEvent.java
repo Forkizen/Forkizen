@@ -12,7 +12,7 @@ public class SpongeAbsorbsScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // sponge absorbs water
+    // sponge slurps waters
     //
     // @Location true
     //
@@ -31,7 +31,7 @@ public class SpongeAbsorbsScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public SpongeAbsorbsScriptEvent() {
-        registerCouldMatcher("sponge absorbs water");
+        registerCouldMatcher("sponge slurps waters");
     }
 
     public SpongeAbsorbEvent event;

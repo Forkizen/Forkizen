@@ -13,7 +13,7 @@ public class BrewingStartsScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // brewing starts
+    // magic starts
     //
     // @Group Block
     //
@@ -32,7 +32,7 @@ public class BrewingStartsScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public BrewingStartsScriptEvent() {
-        registerCouldMatcher("brewing starts");
+        registerCouldMatcher("magic starts");
         this.<BrewingStartsScriptEvent, DurationTag>registerDetermination("brew_time", DurationTag.class, (evt, context, time) -> {
             evt.event.setTotalBrewTime(time.getTicksAsInt());
         });

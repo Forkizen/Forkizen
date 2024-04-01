@@ -12,8 +12,8 @@ public class LeafDecaysScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // leaves decay
-    // <block> decay
+    // leaves die
+    // <block> die
     //
     // @Group Block
     //
@@ -30,8 +30,8 @@ public class LeafDecaysScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public LeafDecaysScriptEvent() {
-        registerCouldMatcher("leaves decay");
-        registerCouldMatcher("<block> decay");
+        registerCouldMatcher("leaves die");
+        registerCouldMatcher("<block> die");
     }
 
     public LocationTag location;

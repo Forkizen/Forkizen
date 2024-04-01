@@ -13,7 +13,7 @@ public class CauldronLevelChangeScriptEvent extends BukkitScriptEvent implements
 
     // <--[event]
     // @Events
-    // cauldron level changes|raises|lowers
+    // water holder level changes|raises|lowers
     //
     // @Group Block
     //
@@ -37,7 +37,7 @@ public class CauldronLevelChangeScriptEvent extends BukkitScriptEvent implements
     // -->
 
     public CauldronLevelChangeScriptEvent() {
-        registerCouldMatcher("cauldron level changes|raises|lowers");
+        registerCouldMatcher("water holder level changes|raises|lowers");
         registerSwitches("cause");
     }
 
@@ -52,7 +52,7 @@ public class CauldronLevelChangeScriptEvent extends BukkitScriptEvent implements
         if (!runGenericSwitchCheck(path, "cause", event.getReason().name())) {
             return false;
         }
-        String changeType = path.eventArgLowerAt(2);
+        String changeType = path.eventArgLowerAt(3);
         if (changeType.equals("raises")) {
             if (event.getNewLevel() <= event.getOldLevel()) {
                 return false;

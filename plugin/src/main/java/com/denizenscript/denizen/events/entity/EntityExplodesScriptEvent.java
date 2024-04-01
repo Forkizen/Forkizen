@@ -19,7 +19,7 @@ public class EntityExplodesScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // <entity> explodes
+    // <entity> is blown to bits and pieces
     //
     // @Group Entity
     //
@@ -42,7 +42,7 @@ public class EntityExplodesScriptEvent extends BukkitScriptEvent implements List
     // -->
 
     public EntityExplodesScriptEvent() {
-        registerCouldMatcher("<entity> explodes");
+        registerCouldMatcher("<entity> is blown to bits and pieces");
     }
 
     public EntityTag entity;

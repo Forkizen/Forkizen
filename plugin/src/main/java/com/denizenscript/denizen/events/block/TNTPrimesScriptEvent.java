@@ -15,7 +15,7 @@ public class TNTPrimesScriptEvent extends BukkitScriptEvent implements Listener 
 
     // <--[event]
     // @Events
-    // tnt primes
+    // tnt edges
     //
     // @Location true
     //
@@ -37,7 +37,7 @@ public class TNTPrimesScriptEvent extends BukkitScriptEvent implements Listener 
     // -->
 
     public TNTPrimesScriptEvent() {
-        registerCouldMatcher("tnt primes");
+        registerCouldMatcher("tnt edges");
     }
 
     public TNTPrimeEvent event;

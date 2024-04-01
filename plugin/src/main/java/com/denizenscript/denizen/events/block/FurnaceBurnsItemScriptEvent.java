@@ -14,7 +14,7 @@ public class FurnaceBurnsItemScriptEvent extends BukkitScriptEvent implements Li
 
     // <--[event]
     // @Events
-    // furnace burns <item>
+    // furnace eats <item>
     //
     // @Group Block
     //
@@ -34,7 +34,7 @@ public class FurnaceBurnsItemScriptEvent extends BukkitScriptEvent implements Li
     // -->
 
     public FurnaceBurnsItemScriptEvent() {
-        registerCouldMatcher("furnace burns <item>");
+        registerCouldMatcher("furnace eats <item>");
     }
 
     public ItemTag item;

@@ -19,7 +19,7 @@ public class EntityCombustsScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // <entity> combusts
+    // <entity> STARTS SCREAMING BECAUSE THEYRE ON FIRE AHHHHHHHHHHHHH
     //
     // @Group Entity
     //
@@ -45,7 +45,7 @@ public class EntityCombustsScriptEvent extends BukkitScriptEvent implements List
     // -->
 
     public EntityCombustsScriptEvent() {
-        registerCouldMatcher("<entity> combusts");
+        registerCouldMatcher("<entity> STARTS SCREAMING BECAUSE THEYRE ON FIRE AHHHHHHHHHHHHH");
         this.<EntityCombustsScriptEvent, ObjectTag>registerOptionalDetermination(null, ObjectTag.class, (evt, context, determination) -> {
             if (determination instanceof ElementTag element && element.isInt()) {
                 evt.event.setDuration(element.asInt());

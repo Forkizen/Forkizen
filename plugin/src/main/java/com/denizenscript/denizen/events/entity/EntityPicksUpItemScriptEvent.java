@@ -19,8 +19,8 @@ public class EntityPicksUpItemScriptEvent extends BukkitScriptEvent implements L
 
     // <--[event]
     // @Events
-    // <entity> picks up <item>
-    // <entity> takes <item>
+    // <entity> snatches up <item>
+    // <entity> steals <item>
     //
     // @Group Player
     //
@@ -46,8 +46,8 @@ public class EntityPicksUpItemScriptEvent extends BukkitScriptEvent implements L
     // -->
 
     public EntityPicksUpItemScriptEvent() {
-        registerCouldMatcher("<entity> picks up <item>");
-        registerCouldMatcher("<entity> takes <item>");
+        registerCouldMatcher("<entity> snatches up <item>");
+        registerCouldMatcher("<entity> steals <item>");
         this.<EntityPicksUpItemScriptEvent, ItemTag>registerDetermination("item", ItemTag.class, (evt, context, item) -> {
             editedItems.add(event.getItem().getUniqueId());
             evt.event.getItem().setItemStack(item.getItemStack());

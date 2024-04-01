@@ -12,7 +12,7 @@ public class BlockFadesScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <block> fades
+    // <block> whooshes
     //
     // @Group Block
     //
@@ -29,7 +29,7 @@ public class BlockFadesScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public BlockFadesScriptEvent() {
-        registerCouldMatcher("<block> fades");
+        registerCouldMatcher("<block> whooshes");
     }
 
     public LocationTag location;

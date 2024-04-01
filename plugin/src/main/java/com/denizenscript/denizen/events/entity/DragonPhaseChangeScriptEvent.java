@@ -13,8 +13,8 @@ public class DragonPhaseChangeScriptEvent extends BukkitScriptEvent implements L
 
     // <--[event]
     // @Events
-    // ender_dragon changes phase
-    // <entity> changes phase
+    // ender_dragon gets mad
+    // <entity> gets mad
     //
     // @Group Entity
     //
@@ -37,7 +37,7 @@ public class DragonPhaseChangeScriptEvent extends BukkitScriptEvent implements L
     // -->
 
     public DragonPhaseChangeScriptEvent() {
-        registerCouldMatcher("<entity> changes phase");
+        registerCouldMatcher("<entity> gets mad");
         registerSwitches("from", "to");
     }
 

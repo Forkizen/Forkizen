@@ -13,7 +13,7 @@ public class EntityResurrectScriptEvent extends BukkitScriptEvent implements Lis
 
     // <--[event]
     // @Events
-    // <entity> resurrected
+    // <entity> COMES BACK TO LIFE
     //
     // @Group Entity
     //
@@ -31,7 +31,7 @@ public class EntityResurrectScriptEvent extends BukkitScriptEvent implements Lis
     // -->
 
     public EntityResurrectScriptEvent() {
-        registerCouldMatcher("<entity> resurrected");
+        registerCouldMatcher("<entity> COMES BACK TO LIFE");
     }
 
     public EntityTag entity;

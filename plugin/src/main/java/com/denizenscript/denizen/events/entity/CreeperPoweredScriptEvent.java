@@ -13,7 +13,7 @@ public class CreeperPoweredScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // creeper powered (because <'cause'>)
+    // creeper goes super saiyan (because <'cause'>)
     //
     // @Group Entity
     //
@@ -31,7 +31,7 @@ public class CreeperPoweredScriptEvent extends BukkitScriptEvent implements List
     // -->
 
     public CreeperPoweredScriptEvent() {
-        registerCouldMatcher("creeper powered (because <'cause'>)");
+        registerCouldMatcher("creeper goes super saiyan (because <'cause'>)");
     }
 
     public EntityTag lightning;
@@ -41,8 +41,8 @@ public class CreeperPoweredScriptEvent extends BukkitScriptEvent implements List
 
     @Override
     public boolean matches(ScriptPath path) {
-        if (path.eventArgLowerAt(2).equals("because")
-                && !path.eventArgLowerAt(3).equals(CoreUtilities.toLowerCase(cause.toString()))) {
+        if (path.eventArgLowerAt(4).equals("because")
+                && !path.eventArgLowerAt(5).equals(CoreUtilities.toLowerCase(cause.toString()))) {
             return false;
         }
         if (!runInCheck(path, entity.getLocation())) {

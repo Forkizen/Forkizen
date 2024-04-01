@@ -12,7 +12,7 @@ public class RedstoneScriptEvent extends BukkitScriptEvent implements Listener {
 
     // <--[event]
     // @Events
-    // redstone recalculated
+    // redstone einsteined
     //
     // @Group Block
     //
@@ -33,7 +33,7 @@ public class RedstoneScriptEvent extends BukkitScriptEvent implements Listener {
     // -->
 
     public RedstoneScriptEvent() {
-        registerCouldMatcher("redstone recalculated");
+        registerCouldMatcher("redstone einsteined");
     }
 
 

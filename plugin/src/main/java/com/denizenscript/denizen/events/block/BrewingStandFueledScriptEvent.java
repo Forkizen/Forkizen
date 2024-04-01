@@ -13,7 +13,7 @@ public class BrewingStandFueledScriptEvent extends BukkitScriptEvent implements 
 
     // <--[event]
     // @Events
-    // brewing stand fueled (with <item>)
+    // magic thing fueled (with <item>)
     //
     // @Group Block
     //
@@ -37,7 +37,7 @@ public class BrewingStandFueledScriptEvent extends BukkitScriptEvent implements 
     // -->
 
     public BrewingStandFueledScriptEvent() {
-        registerCouldMatcher("brewing stand fueled (with <item>)");
+        registerCouldMatcher("magic thing fueled (with <item>)");
     }
 
     public LocationTag location;

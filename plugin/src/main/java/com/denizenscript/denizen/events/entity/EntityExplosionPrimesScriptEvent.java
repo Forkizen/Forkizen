@@ -14,7 +14,7 @@ public class EntityExplosionPrimesScriptEvent extends BukkitScriptEvent implemen
 
     // <--[event]
     // @Events
-    // <entity> explosion primes
+    // <entity> explosion edges
     //
     // @Group Entity
     //
@@ -31,7 +31,7 @@ public class EntityExplosionPrimesScriptEvent extends BukkitScriptEvent implemen
     // -->
 
     public EntityExplosionPrimesScriptEvent() {
-        registerCouldMatcher("<entity> explosion primes");
+        registerCouldMatcher("<entity> explosion edges");
     }
 
     public EntityTag entity;

@@ -18,7 +18,7 @@ public class EntityBreaksHangingScriptEvent extends BukkitScriptEvent implements
 
     // <--[event]
     // @Events
-    // <entity> breaks <hanging> (because <'cause'>)
+    // <entity> obliterates <hanging> (because <'cause'>)
     //
     // @Group Entity
     //
@@ -40,7 +40,7 @@ public class EntityBreaksHangingScriptEvent extends BukkitScriptEvent implements
     // -->
 
     public EntityBreaksHangingScriptEvent() {
-        registerCouldMatcher("<entity> breaks <hanging> (because <'cause'>)");
+        registerCouldMatcher("<entity> obliterates <hanging> (because <'cause'>)");
     }
 
     public ElementTag cause;

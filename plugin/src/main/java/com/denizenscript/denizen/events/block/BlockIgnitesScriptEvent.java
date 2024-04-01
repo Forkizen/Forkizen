@@ -14,7 +14,7 @@ public class BlockIgnitesScriptEvent extends BukkitScriptEvent implements Listen
 
     // <--[event]
     // @Events
-    // block ignites
+    // block catches fire
     //
     // @Group Block
     //
@@ -34,7 +34,7 @@ public class BlockIgnitesScriptEvent extends BukkitScriptEvent implements Listen
     // -->
 
     public BlockIgnitesScriptEvent() {
-        registerCouldMatcher("block ignites");
+        registerCouldMatcher("block catches fire");
         registerSwitches("cause");
     }
 

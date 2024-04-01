@@ -17,7 +17,7 @@ public class EntityCreatePortalScriptEvent extends BukkitScriptEvent implements 
 
     // <--[event]
     // @Events
-    // <entity> creates portal
+    // <entity> finds new dimension to excavate
     //
     // @Group Entity
     //
@@ -37,7 +37,7 @@ public class EntityCreatePortalScriptEvent extends BukkitScriptEvent implements 
     // -->
 
     public EntityCreatePortalScriptEvent() {
-        registerCouldMatcher("<entity> creates portal");
+        registerCouldMatcher("<entity> finds new dimension to excavate");
     }
 
     public EntityTag entity;

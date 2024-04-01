@@ -12,7 +12,7 @@ public class EntitySpellCastScriptEvent extends BukkitScriptEvent implements Lis
 
     // <--[event]
     // @Events
-    // <entity> casts <'spell'>
+    // <entity> uses black magic to cast <'spell'>
     //
     // @Group Entity
     //
@@ -29,7 +29,7 @@ public class EntitySpellCastScriptEvent extends BukkitScriptEvent implements Lis
     // -->
 
     public EntitySpellCastScriptEvent() {
-        registerCouldMatcher("<entity> casts <'spell'>");
+        registerCouldMatcher("<entity> uses black magic to cast <'spell'>");
     }
 
     public EntityTag entity;
@@ -40,7 +40,7 @@ public class EntitySpellCastScriptEvent extends BukkitScriptEvent implements Lis
         if (!path.tryArgObject(0, entity)) {
             return false;
         }
-        if (!path.eventArgLowerAt(2).equals("spell") && !runGenericCheck(path.eventArgLowerAt(2), event.getSpell().toString())) {
+        if (!path.eventArgLowerAt(6).equals("spell") && !runGenericCheck(path.eventArgLowerAt(6), event.getSpell().toString())) {
             return false;
         }
         if (!runInCheck(path, entity.getLocation())) {

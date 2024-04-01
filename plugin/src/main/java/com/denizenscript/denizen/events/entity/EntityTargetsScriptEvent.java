@@ -15,7 +15,7 @@ public class EntityTargetsScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // <entity> targets (<entity>) (because <'cause'>)
+    // <entity> locks-onto (<entity>) (because <'cause'>)
     //
     // @Group Entity
     //
@@ -38,7 +38,7 @@ public class EntityTargetsScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public EntityTargetsScriptEvent() {
-        registerCouldMatcher("<entity> targets (<entity>) (because <'cause'>)");
+        registerCouldMatcher("<entity> locks-onto (<entity>) (because <'cause'>)");
     }
 
     public EntityTag entity;

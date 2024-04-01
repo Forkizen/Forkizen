@@ -15,7 +15,7 @@ public class EntityFormsBlockScriptEvent extends BukkitScriptEvent implements Li
 
     // <--[event]
     // @Events
-    // <entity> forms <block>
+    // <entity> summons <block>
     //
     // @Group Entity
     //
@@ -34,7 +34,7 @@ public class EntityFormsBlockScriptEvent extends BukkitScriptEvent implements Li
     // -->
 
     public EntityFormsBlockScriptEvent() {
-        registerCouldMatcher("<entity> forms <block>");
+        registerCouldMatcher("<entity> summons <block>");
     }
 
     public MaterialTag material;

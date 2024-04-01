@@ -15,7 +15,7 @@ public class EntityFoodLevelChangeScriptEvent extends BukkitScriptEvent implemen
 
     // <--[event]
     // @Events
-    // <entity> changes food level
+    // <entity> starts to get hungry
     //
     // @Synonyms player hunger depletes
     //
@@ -44,7 +44,7 @@ public class EntityFoodLevelChangeScriptEvent extends BukkitScriptEvent implemen
     // -->
 
     public EntityFoodLevelChangeScriptEvent() {
-        registerCouldMatcher("<entity> changes food level");
+        registerCouldMatcher("<entity> starts to get hungry");
         registerSwitches("item");
     }
 

@@ -13,7 +13,7 @@ public class NoteBlockPlaysNoteScriptEvent extends BukkitScriptEvent implements 
 
     // <--[event]
     // @Events
-    // noteblock plays note
+    // noteblock becomes hans zimmer
     //
     // @Group Block
     //
@@ -37,7 +37,7 @@ public class NoteBlockPlaysNoteScriptEvent extends BukkitScriptEvent implements 
     // -->
 
     public NoteBlockPlaysNoteScriptEvent() {
-        registerCouldMatcher("noteblock plays note");
+        registerCouldMatcher("noteblock becomes hans zimmer");
         registerSwitches("instrument");
     }
 
