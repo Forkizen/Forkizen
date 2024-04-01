@@ -21,7 +21,7 @@ public class ItemRecipeFormedScriptEvent extends BukkitScriptEvent implements Li
 
     // <--[event]
     // @Events
-    // <item> recipe formed
+    // <item> witchcraft succeeds
     //
     // @Group Item
     //
@@ -43,7 +43,7 @@ public class ItemRecipeFormedScriptEvent extends BukkitScriptEvent implements Li
     // -->
 
     public ItemRecipeFormedScriptEvent() {
-        registerCouldMatcher("<item> recipe formed");
+        registerCouldMatcher("<item> witchcraft succeeds");
         this.<ItemRecipeFormedScriptEvent, ObjectTag>registerOptionalDetermination(null, ObjectTag.class, (evt, context, determination) -> {
             if (determination.canBeType(ItemTag.class)) {
                 ItemTag result = determination.asType(ItemTag.class, context);

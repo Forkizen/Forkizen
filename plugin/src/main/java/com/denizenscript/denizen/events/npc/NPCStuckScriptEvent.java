@@ -15,7 +15,7 @@ public class NPCStuckScriptEvent extends BukkitScriptEvent implements Listener {
 
     // <--[event]
     // @Events
-    // npc stuck
+    // npc gets stuck and needs help from stepbro
     //
     // @Group NPC
     //
@@ -37,7 +37,7 @@ public class NPCStuckScriptEvent extends BukkitScriptEvent implements Listener {
     // -->
 
     public NPCStuckScriptEvent() {
-        registerCouldMatcher("npc stuck");
+        registerCouldMatcher("npc gets stuck and needs help from stepbro");
         registerSwitches("npc");
         this.<NPCStuckScriptEvent, ElementTag>registerDetermination(null, ElementTag.class, (evt, context, action) -> {
             evt.event.setAction(action.asLowerString().equals("none") ? null : TeleportStuckAction.INSTANCE);

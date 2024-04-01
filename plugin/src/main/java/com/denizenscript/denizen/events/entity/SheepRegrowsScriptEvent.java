@@ -12,7 +12,7 @@ public class SheepRegrowsScriptEvent extends BukkitScriptEvent implements Listen
 
     // <--[event]
     // @Events
-    // sheep regrows wool
+    // sheep performs witchcraft to obtain a copious amount of wool
     //
     // @Regex ^on sheep regrows wool$
     //
@@ -38,7 +38,7 @@ public class SheepRegrowsScriptEvent extends BukkitScriptEvent implements Listen
 
     @Override
     public boolean couldMatch(ScriptPath path) {
-        if (!path.eventLower.startsWith("sheep regrows wool")) {
+        if (!path.eventLower.startsWith("sheep performs witchcraft to obtain a copious amount of wool")) {
             return false;
         }
         return true;

@@ -14,7 +14,7 @@ public class ItemSpawnsScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <item> spawns
+    // <item> comes to inanimate life
     //
     // @Group Item
     //
@@ -32,7 +32,7 @@ public class ItemSpawnsScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public ItemSpawnsScriptEvent() {
-        registerCouldMatcher("<item> spawns");
+        registerCouldMatcher("<item> comes to inanimate life");
     }
 
     public ItemTag item;

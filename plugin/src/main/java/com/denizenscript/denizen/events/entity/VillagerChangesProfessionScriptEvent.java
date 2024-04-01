@@ -13,7 +13,7 @@ public class VillagerChangesProfessionScriptEvent extends BukkitScriptEvent impl
 
     // <--[event]
     // @Events
-    // villager changes profession
+    // villager hates his job so he applies for a new one and gets the position
     //
     // @Regex ^on villager changes profession$
     //
@@ -42,7 +42,7 @@ public class VillagerChangesProfessionScriptEvent extends BukkitScriptEvent impl
 
     @Override
     public boolean couldMatch(ScriptPath path) {
-        return path.eventLower.startsWith("villager changes profession");
+        return path.eventLower.startsWith("villager hates his job so he applies for a new one and gets the position");
     }
 
     @Override

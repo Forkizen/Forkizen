@@ -14,7 +14,7 @@ public class ItemMergesScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <item> merges
+    // <item> becomes one
     //
     // @Group Item
     //
@@ -33,7 +33,7 @@ public class ItemMergesScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public ItemMergesScriptEvent() {
-        registerCouldMatcher("<item> merges");
+        registerCouldMatcher("<item> becomes one");
     }
 
     public ItemTag item;

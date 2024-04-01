@@ -13,7 +13,7 @@ public class ExperienceBottleBreaksScriptEvent extends BukkitScriptEvent impleme
 
     // <--[event]
     // @Events
-    // experience bottle breaks
+    // yellow thing breaks
     //
     // @Regex ^on experience bottle breaks$
     //
@@ -43,7 +43,7 @@ public class ExperienceBottleBreaksScriptEvent extends BukkitScriptEvent impleme
 
     @Override
     public boolean couldMatch(ScriptPath path) {
-        if (!path.eventLower.startsWith("experience bottle breaks")) {
+        if (!path.eventLower.startsWith("yellow thing breaks")) {
             return false;
         }
         return true;

@@ -12,7 +12,7 @@ public class ItemMoveScriptEvent extends BukkitScriptEvent implements Listener {
 
     // <--[event]
     // @Events
-    // <item> moves from <inventory> (to <inventory>)
+    // <item> gets a divorce packs up and moves from <inventory> (to <inventory>)
     //
     // @Group Item
     //
@@ -34,7 +34,7 @@ public class ItemMoveScriptEvent extends BukkitScriptEvent implements Listener {
     // -->
 
     public ItemMoveScriptEvent() {
-        registerCouldMatcher("<item> moves from <inventory> (to <inventory>)");
+        registerCouldMatcher("<item> gets a divorce packs up and moves from <inventory> (to <inventory>)");
     }
 
 
@@ -48,10 +48,10 @@ public class ItemMoveScriptEvent extends BukkitScriptEvent implements Listener {
         if (!path.tryArgObject(0, item)) {
             return false;
         }
-        if (!path.tryArgObject(3, origin)) {
+        if (!path.tryArgObject(9, origin)) {
             return false;
         }
-        if (path.eventArgLowerAt(4).equals("to") && !path.tryArgObject(5, destination)) {
+        if (path.eventArgLowerAt(10).equals("to") && !path.tryArgObject(11, destination)) {
             return false;
         }
         if (!runInCheck(path, origin.getLocation())) {

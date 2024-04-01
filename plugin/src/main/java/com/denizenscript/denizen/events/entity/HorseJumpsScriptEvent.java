@@ -15,8 +15,8 @@ public class HorseJumpsScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // horse jumps
-    // <entity> jumps
+    // horse 360s
+    // <entity> 360s
     //
     // @Group Entity
     //
@@ -37,7 +37,7 @@ public class HorseJumpsScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public HorseJumpsScriptEvent() {
-        registerCouldMatcher("<entity> jumps");
+        registerCouldMatcher("<entity> 360s");
     }
 
     public EntityTag entity;

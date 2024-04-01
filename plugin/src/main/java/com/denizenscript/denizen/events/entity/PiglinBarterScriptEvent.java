@@ -14,7 +14,7 @@ public class PiglinBarterScriptEvent extends BukkitScriptEvent implements Listen
 
     // <--[event]
     // @Events
-    // piglin barter
+    // piglin completes trade offer
     //
     // @Switch input:<item> to only process the event if the input item matches the given item matcher.
     //
@@ -37,7 +37,7 @@ public class PiglinBarterScriptEvent extends BukkitScriptEvent implements Listen
     // -->
 
     public PiglinBarterScriptEvent() {
-        registerCouldMatcher("piglin barter");
+        registerCouldMatcher("piglin completes trade offer");
         registerSwitches("input");
         this.<PiglinBarterScriptEvent, ListTag>registerDetermination("result", ListTag.class, (evt, context, result) -> {
             evt.event.getOutcome().clear();

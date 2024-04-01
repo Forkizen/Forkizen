@@ -21,7 +21,7 @@ public class ItemEnchantedScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // <item> enchanted
+    // <item> upgraded or something
     //
     // @Group Item
     //
@@ -52,7 +52,7 @@ public class ItemEnchantedScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public ItemEnchantedScriptEvent() {
-        registerCouldMatcher("<item> enchanted");
+        registerCouldMatcher("<item> upgraded or something");
         registerSwitches("enchant");
     }
 

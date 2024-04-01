@@ -16,7 +16,7 @@ public class NPCOpensScriptEvent extends BukkitScriptEvent implements Listener {
 
     // <--[event]
     // @Events
-    // npc opens <block>
+    // npc rips open <block>
     //
     // @Group NPC
     //
@@ -36,7 +36,7 @@ public class NPCOpensScriptEvent extends BukkitScriptEvent implements Listener {
     // -->
 
     public NPCOpensScriptEvent() {
-        registerCouldMatcher("npc opens <block>");
+        registerCouldMatcher("npc rips opens <block>");
         registerSwitches("npc");
     }
 
@@ -51,7 +51,7 @@ public class NPCOpensScriptEvent extends BukkitScriptEvent implements Listener {
         if (!runInCheck(path, location)) {
             return false;
         }
-        if (!path.tryArgObject(2, new MaterialTag(location.getBlock()))) {
+        if (!path.tryArgObject(3, new MaterialTag(location.getBlock()))) {
             return false;
         }
         return super.matches(path);

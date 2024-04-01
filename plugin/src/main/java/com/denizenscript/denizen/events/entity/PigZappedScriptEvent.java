@@ -12,7 +12,7 @@ public class PigZappedScriptEvent extends BukkitScriptEvent implements Listener 
 
     // <--[event]
     // @Events
-    // pig zapped
+    // pig smitten by zeus
     //
     // @Regex ^on pig zapped$
     //
@@ -41,7 +41,7 @@ public class PigZappedScriptEvent extends BukkitScriptEvent implements Listener 
 
     @Override
     public boolean couldMatch(ScriptPath path) {
-        if (!path.eventLower.equals("pig zapped")) {
+        if (!path.eventLower.equals("pig smitten by zeus")) {
             return false;
         }
         return true;

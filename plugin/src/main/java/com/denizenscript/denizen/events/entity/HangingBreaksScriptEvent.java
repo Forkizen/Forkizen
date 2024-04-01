@@ -15,7 +15,7 @@ public class HangingBreaksScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // <hanging> breaks (because <'cause'>)
+    // <hanging> dies (because <'cause'>)
     //
     // @Group Entity
     //
@@ -32,7 +32,7 @@ public class HangingBreaksScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public HangingBreaksScriptEvent() {
-        registerCouldMatcher("<hanging> breaks (because <'cause'>)");
+        registerCouldMatcher("<hanging> dies (because <'cause'>)");
     }
 
     public ElementTag cause;

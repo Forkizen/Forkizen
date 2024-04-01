@@ -14,7 +14,7 @@ public class NPCNavigationScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // npc begins|completes|cancels navigation
+    // npc begins|completes|cancels gps
     //
     // @Group NPC
     //
@@ -34,7 +34,7 @@ public class NPCNavigationScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public NPCNavigationScriptEvent() {
-        registerCouldMatcher("npc begins|completes|cancels navigation");
+        registerCouldMatcher("npc begins|completes|cancels gps");
         registerSwitches("npc");
     }
 

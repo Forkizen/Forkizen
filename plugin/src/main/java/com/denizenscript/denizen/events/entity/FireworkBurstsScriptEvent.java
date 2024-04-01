@@ -15,7 +15,7 @@ public class FireworkBurstsScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // firework bursts
+    // watersleep explodes
     //
     // @Regex ^on firework bursts$
     //
@@ -43,7 +43,7 @@ public class FireworkBurstsScriptEvent extends BukkitScriptEvent implements List
 
     @Override
     public boolean couldMatch(ScriptPath path) {
-        if (!path.eventLower.startsWith("firework bursts")) {
+        if (!path.eventLower.startsWith("watersleep explodes")) {
             return false;
         }
         return true;

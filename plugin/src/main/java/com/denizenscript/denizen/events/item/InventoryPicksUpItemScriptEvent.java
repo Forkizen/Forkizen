@@ -13,7 +13,7 @@ public class InventoryPicksUpItemScriptEvent extends BukkitScriptEvent implement
 
     // <--[event]
     // @Events
-    // <inventory> picks up <item>
+    // <inventory> steals an <item>
     //
     // @Group Item
     //
@@ -31,7 +31,7 @@ public class InventoryPicksUpItemScriptEvent extends BukkitScriptEvent implement
     // -->
 
     public InventoryPicksUpItemScriptEvent() {
-        registerCouldMatcher("<inventory> picks up <item>");
+        registerCouldMatcher("<inventory> steals an <item>");
     }
 
     public InventoryTag inventory;

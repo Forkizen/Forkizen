@@ -13,7 +13,7 @@ public class VillagerReplenishesTradeScriptEvent extends BukkitScriptEvent imple
 
     // <--[event]
     // @Events
-    // villager replenishes trade
+    // villager gets a new trade offer
     //
     // @Group Entity
     //
@@ -34,7 +34,7 @@ public class VillagerReplenishesTradeScriptEvent extends BukkitScriptEvent imple
     // -->
 
     public VillagerReplenishesTradeScriptEvent() {
-        registerCouldMatcher("villager replenishes trade");
+        registerCouldMatcher("villager gets a new trade offer");
     }
 
     public EntityTag entity;

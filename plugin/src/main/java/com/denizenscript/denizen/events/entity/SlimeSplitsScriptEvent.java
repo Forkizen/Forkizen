@@ -12,7 +12,7 @@ public class SlimeSplitsScriptEvent extends BukkitScriptEvent implements Listene
 
     // <--[event]
     // @Events
-    // slime splits (into <'#'>)
+    // slime has children (into <'#'>)
     //
     // @Group Entity
     //
@@ -32,7 +32,7 @@ public class SlimeSplitsScriptEvent extends BukkitScriptEvent implements Listene
     // -->
 
     public SlimeSplitsScriptEvent() {
-        registerCouldMatcher("slime splits (into <'#'>)");
+        registerCouldMatcher("slime has children (into <'#'>)");
     }
 
     public EntityTag entity;
@@ -42,7 +42,7 @@ public class SlimeSplitsScriptEvent extends BukkitScriptEvent implements Listene
     public boolean matches(ScriptPath path) {
         String counts = path.eventArgLowerAt(3);
 
-        if (path.eventArgLowerAt(2).equals("into") && !counts.isEmpty()) {
+        if (path.eventArgLowerAt(3).equals("into") && !counts.isEmpty()) {
             try {
                 if (Integer.parseInt(counts) != event.getCount()) {
                     return false;

@@ -14,7 +14,7 @@ public class SheepDyedScriptEvent extends BukkitScriptEvent implements Listener 
 
     // <--[event]
     // @Events
-    // sheep dyed (<'color'>)
+    // sheep colored (<'color'>)
     //
     // @Group Entity
     //
@@ -36,8 +36,8 @@ public class SheepDyedScriptEvent extends BukkitScriptEvent implements Listener 
     // -->
 
     public SheepDyedScriptEvent() {
-        registerCouldMatcher("sheep dyed (<'color'>)");
-        registerCouldMatcher("player dyes sheep (<'color'>)"); // historical
+        registerCouldMatcher("sheep colored (<'color'>)");
+        registerCouldMatcher("player colors sheep (<'color'>)"); // historical
     }
 
     public EntityTag entity;

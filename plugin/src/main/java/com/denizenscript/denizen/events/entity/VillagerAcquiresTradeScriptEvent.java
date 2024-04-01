@@ -12,7 +12,7 @@ public class VillagerAcquiresTradeScriptEvent extends BukkitScriptEvent implemen
 
     // <--[event]
     // @Events
-    // villager acquires trade
+    // villager obtains trade offer
     //
     // @Regex ^on villager acquires trade$
     //
@@ -40,7 +40,7 @@ public class VillagerAcquiresTradeScriptEvent extends BukkitScriptEvent implemen
 
     @Override
     public boolean couldMatch(ScriptPath path) {
-        return path.eventLower.startsWith("villager acquires trade");
+        return path.eventLower.startsWith("villager obtains trade offer");
     }
 
     @Override

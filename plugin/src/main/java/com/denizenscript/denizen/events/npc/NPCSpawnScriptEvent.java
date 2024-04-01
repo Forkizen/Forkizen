@@ -15,7 +15,7 @@ public class NPCSpawnScriptEvent extends BukkitScriptEvent implements Listener {
 
     // <--[event]
     // @Events
-    // npc spawns
+    // npc given the gift of life
     //
     // @Group NPC
     //
@@ -37,7 +37,7 @@ public class NPCSpawnScriptEvent extends BukkitScriptEvent implements Listener {
     // -->
 
     public NPCSpawnScriptEvent() {
-        registerCouldMatcher("npc spawns");
+        registerCouldMatcher("npc given the gift of life");
         registerSwitches("npc", "reason");
     }
 

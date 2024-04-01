@@ -13,7 +13,7 @@ public class ProjectileLaunchedScriptEvent extends BukkitScriptEvent implements 
 
     // <--[event]
     // @Events
-    // projectile launched
+    // nuke launched
     // <entity> launched
     //
     // @Regex ^on [^\s]+ launched$
@@ -52,7 +52,7 @@ public class ProjectileLaunchedScriptEvent extends BukkitScriptEvent implements 
     @Override
     public boolean matches(ScriptPath path) {
         String projTest = path.eventArgLowerAt(0);
-        if (!projTest.equals("projectile") && !projectile.tryAdvancedMatcher(projTest)) {
+        if (!projTest.equals("nuke") && !projectile.tryAdvancedMatcher(projTest)) {
             return false;
         }
         if (!runInCheck(path, location)) {

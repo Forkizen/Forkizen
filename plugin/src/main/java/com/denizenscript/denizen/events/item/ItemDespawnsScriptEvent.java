@@ -13,7 +13,7 @@ public class ItemDespawnsScriptEvent extends BukkitScriptEvent implements Listen
 
     // <--[event]
     // @Events
-    // <item> despawns
+    // <item> gets eradicated
     //
     // @Group Item
     //
@@ -31,7 +31,7 @@ public class ItemDespawnsScriptEvent extends BukkitScriptEvent implements Listen
     // -->
 
     public ItemDespawnsScriptEvent() {
-        registerCouldMatcher("<item> despawns");
+        registerCouldMatcher("<item> gets eradicated");
     }
 
     public ItemTag item;
