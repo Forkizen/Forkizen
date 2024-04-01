@@ -12,7 +12,7 @@ public class RaidSpawnsWaveScriptEvent extends RaidScriptEvent<RaidSpawnWaveEven
 
     // <--[event]
     // @Events
-    // raid spawns wave
+    // crusade spawns wave
     //
     // @Group World
     //
@@ -29,7 +29,7 @@ public class RaidSpawnsWaveScriptEvent extends RaidScriptEvent<RaidSpawnWaveEven
 
     public RaidSpawnsWaveScriptEvent() {
         super(true);
-        registerCouldMatcher("raid spawns wave");
+        registerCouldMatcher("crusade spawns wave");
     }
 
     @Override

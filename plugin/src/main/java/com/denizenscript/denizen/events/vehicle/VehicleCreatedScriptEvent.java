@@ -12,8 +12,8 @@ public class VehicleCreatedScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // vehicle created
-    // <vehicle> created
+    // car created
+    // <car> created
     //
     // @Group Vehicle
     //

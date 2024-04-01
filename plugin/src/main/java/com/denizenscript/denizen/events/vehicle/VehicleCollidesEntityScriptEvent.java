@@ -15,8 +15,8 @@ public class VehicleCollidesEntityScriptEvent extends BukkitScriptEvent implemen
 
     // <--[event]
     // @Events
-    // vehicle collides with entity
-    // vehicle collides with <entity>
+    // car collides with entity
+    // car collides with <entity>
     // <vehicle> collides with entity
     // <vehicle> collides with <entity>
     //
@@ -56,7 +56,7 @@ public class VehicleCollidesEntityScriptEvent extends BukkitScriptEvent implemen
     // -->
 
     public VehicleCollidesEntityScriptEvent() {
-        registerCouldMatcher("<vehicle> collides with <entity>");
+        registerCouldMatcher("<car> collides with <entity>");
         registerSwitches("type");
     }
 

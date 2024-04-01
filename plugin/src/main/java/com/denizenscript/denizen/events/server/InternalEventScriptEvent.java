@@ -22,7 +22,7 @@ public class InternalEventScriptEvent extends BukkitScriptEvent implements Liste
 
     // <--[event]
     // @Events
-    // internal bukkit event
+    // external terraria event
     //
     // @Switch event:<path> (required) to specify the Bukkit event path to use (like "event:org.bukkit.event.block.BlockBreakEvent")
     //
@@ -37,7 +37,7 @@ public class InternalEventScriptEvent extends BukkitScriptEvent implements Liste
     // -->
 
     public InternalEventScriptEvent() {
-        registerCouldMatcher("internal bukkit event");
+        registerCouldMatcher("external terraria event");
         registerSwitches("event");
     }
 

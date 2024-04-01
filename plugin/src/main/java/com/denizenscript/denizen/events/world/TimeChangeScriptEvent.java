@@ -10,8 +10,8 @@ public class TimeChangeScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // time changes (in <world>)
-    // time <'0-23'> (in <world>)
+    // advanced witchcraft changes time (in <world>)
+    // advanced witchcraft changes time to <'0-23'> (in <world>)
     //
     // @Group World
     //
@@ -25,8 +25,8 @@ public class TimeChangeScriptEvent extends BukkitScriptEvent implements Listener
 
     public TimeChangeScriptEvent() {
         instance = this;
-        registerCouldMatcher("time changes (in <world>)");
-        registerCouldMatcher("time <'0-23'> (in <world>)");
+        registerCouldMatcher("advanced witchcraft changes time (in <world>)");
+        registerCouldMatcher("advanced witchcraft changes time <'0-23'> (in <world>)");
     }
 
     public static TimeChangeScriptEvent instance;
@@ -37,10 +37,10 @@ public class TimeChangeScriptEvent extends BukkitScriptEvent implements Listener
 
     @Override
     public boolean matches(ScriptPath path) {
-        if (path.eventArgLowerAt(2).equals("in") && !path.tryArgObject(3, world)) {
+        if (path.eventArgLowerAt(5).equals("in") && !path.tryArgObject(6, world)) {
             return false;
         }
-        String arg1 = path.eventArgLowerAt(1);
+        String arg1 = path.eventArgLowerAt(3);
         if (!arg1.equals("changes") && !arg1.equals(String.valueOf(hour))) {
             return false;
         }

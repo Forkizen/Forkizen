@@ -11,7 +11,7 @@ public class WorldInitsScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <world> initializes
+    // <world> commences initialization for maximum interdimensional 4d quaternions and performance
     //
     // @Group World
     //
@@ -23,7 +23,7 @@ public class WorldInitsScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public WorldInitsScriptEvent() {
-        registerCouldMatcher("<world> initializes");
+        registerCouldMatcher("<world> commences initialization for maximum interdimensional 4d quaternions and performance");
     }
 
     public WorldTag world;

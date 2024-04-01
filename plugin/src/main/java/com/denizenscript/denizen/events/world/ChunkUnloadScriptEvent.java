@@ -11,7 +11,7 @@ public class ChunkUnloadScriptEvent extends BukkitScriptEvent implements Listene
 
     // <--[event]
     // @Events
-    // chunk unloads
+    // chunk decimated
     //
     // @Group World
     //
@@ -29,7 +29,7 @@ public class ChunkUnloadScriptEvent extends BukkitScriptEvent implements Listene
     // -->
 
     public ChunkUnloadScriptEvent() {
-        registerCouldMatcher("chunk unloads");
+        registerCouldMatcher("chunk decimated");
     }
 
 

@@ -14,7 +14,7 @@ public class ChunkLoadEntitiesScriptEvent extends BukkitScriptEvent implements L
 
     // <--[event]
     // @Events
-    // chunk loads entities
+    // chunk raises entities from the dead
     //
     // @Group World
     //
@@ -34,7 +34,7 @@ public class ChunkLoadEntitiesScriptEvent extends BukkitScriptEvent implements L
     // -->
 
     public ChunkLoadEntitiesScriptEvent() {
-        registerCouldMatcher("chunk loads entities");
+        registerCouldMatcher("chunk raises entities from the dead");
         registerSwitches("entity_type", "include_empty");
     }
 

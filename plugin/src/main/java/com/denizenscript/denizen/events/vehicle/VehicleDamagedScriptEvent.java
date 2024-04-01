@@ -14,8 +14,8 @@ public class VehicleDamagedScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // <vehicle> damaged
-    // <entity> damages <vehicle>
+    // <car> damaged
+    // <entity> damages <car>
     //
     // @Group Vehicle
     //
@@ -54,8 +54,8 @@ public class VehicleDamagedScriptEvent extends BukkitScriptEvent implements List
     // -->
 
     public VehicleDamagedScriptEvent() {
-        registerCouldMatcher("<vehicle> damaged");
-        registerCouldMatcher("<entity> damages <vehicle>");
+        registerCouldMatcher("<car> damaged");
+        registerCouldMatcher("<entity> damages <car>");
         registerSwitches("type");
     }
 

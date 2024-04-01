@@ -6,7 +6,7 @@ public class ServerStartScriptEvent extends BukkitScriptEvent {
 
     // <--[event]
     // @Events
-    // server start
+    // server born
     //
     // @Group Server
     //
@@ -16,7 +16,7 @@ public class ServerStartScriptEvent extends BukkitScriptEvent {
 
     public ServerStartScriptEvent() {
         instance = this;
-        registerCouldMatcher("server start");
+        registerCouldMatcher("server born");
     }
 
     public static ServerStartScriptEvent instance;

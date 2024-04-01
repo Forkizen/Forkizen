@@ -15,7 +15,7 @@ public class GenericGameEventScriptEvent extends BukkitScriptEvent implements Li
 
     // <--[event]
     // @Events
-    // generic game event
+    // irregular game event
     //
     // @Group World
     //
@@ -36,7 +36,7 @@ public class GenericGameEventScriptEvent extends BukkitScriptEvent implements Li
     // -->
 
     public GenericGameEventScriptEvent() {
-        registerCouldMatcher("generic game event");
+        registerCouldMatcher("irregular game event");
         registerSwitches("type");
     }
 

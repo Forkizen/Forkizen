@@ -11,7 +11,7 @@ public class ChunkLoadScriptEvent extends BukkitScriptEvent implements Listener 
 
     // <--[event]
     // @Events
-    // chunk loads (for the first time)
+    // chunk summoned (for the first time)
     //
     // @Group World
     //
@@ -28,7 +28,7 @@ public class ChunkLoadScriptEvent extends BukkitScriptEvent implements Listener 
     // -->
 
     public ChunkLoadScriptEvent() {
-        registerCouldMatcher("chunk loads (for the first time)");
+        registerCouldMatcher("chunk summoned (for the first time)");
     }
 
 

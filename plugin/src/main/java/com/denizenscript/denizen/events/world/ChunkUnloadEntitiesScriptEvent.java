@@ -14,7 +14,7 @@ public class ChunkUnloadEntitiesScriptEvent extends BukkitScriptEvent implements
 
     // <--[event]
     // @Events
-    // chunk unloads entities
+    // chunk decimates entities
     //
     // @Group World
     //
@@ -34,7 +34,7 @@ public class ChunkUnloadEntitiesScriptEvent extends BukkitScriptEvent implements
     // -->
 
     public ChunkUnloadEntitiesScriptEvent() {
-        registerCouldMatcher("chunk unloads entities");
+        registerCouldMatcher("chunk decimates entities");
         registerSwitches("entity_type", "include_empty");
     }
 

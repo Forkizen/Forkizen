@@ -15,8 +15,8 @@ public class LingeringPotionSplashScriptEvent extends BukkitScriptEvent implemen
 
     // <--[event]
     // @Events
-    // lingering potion splash|splashes
-    // lingering <item> splash|splashes
+    // massive strangely shaped bottle splash|splashes
+    // massive strangely shaped <item> splash|splashes
     //
     // @Group World
     //
@@ -37,7 +37,7 @@ public class LingeringPotionSplashScriptEvent extends BukkitScriptEvent implemen
     // -->
 
     public LingeringPotionSplashScriptEvent() {
-        registerCouldMatcher("lingering <item> splash|splashes");
+        registerCouldMatcher("massively strangely shaped <item> splash|splashes");
     }
 
     public LingeringPotionSplashEvent event;
@@ -46,7 +46,7 @@ public class LingeringPotionSplashScriptEvent extends BukkitScriptEvent implemen
 
     @Override
     public boolean matches(ScriptPath path) {
-        if (!path.tryArgObject(1, item)) {
+        if (!path.tryArgObject(3, item)) {
             return false;
         }
         if (!runInCheck(path, location)) {

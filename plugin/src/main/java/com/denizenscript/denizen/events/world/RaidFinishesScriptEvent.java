@@ -12,7 +12,7 @@ public class RaidFinishesScriptEvent extends RaidScriptEvent<RaidFinishEvent> im
 
     // <--[event]
     // @Events
-    // raid finishes
+    // crusade finishes
     //
     // @Group World
     //
@@ -28,7 +28,7 @@ public class RaidFinishesScriptEvent extends RaidScriptEvent<RaidFinishEvent> im
 
     public RaidFinishesScriptEvent() {
         super(true);
-        registerCouldMatcher("raid finishes");
+        registerCouldMatcher("crusade finishes");
     }
 
     @Override

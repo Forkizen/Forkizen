@@ -25,7 +25,7 @@ public class ListPingScriptEvent extends BukkitScriptEvent implements Listener {
 
     // <--[event]
     // @Events
-    // server list ping
+    // server list interrogated
     //
     // @Group Server
     //
@@ -53,7 +53,7 @@ public class ListPingScriptEvent extends BukkitScriptEvent implements Listener {
     // -->
 
     public ListPingScriptEvent() {
-        registerCouldMatcher("server list ping");
+        registerCouldMatcher("server list interrogated");
         this.<ListPingScriptEvent, ListTag>registerOptionalDetermination(null, ListTag.class, (evt, context, list) -> {
             if (ArgumentHelper.matchesInteger(list.get(0))) {
                 evt.event.setMaxPlayers(Integer.parseInt(list.get(0)));

@@ -10,7 +10,7 @@ public class RaidStopsScriptEvent extends RaidScriptEvent<RaidStopEvent> impleme
 
     // <--[event]
     // @Events
-    // raid stops
+    // crusade stops
     //
     // @Group World
     //
@@ -28,7 +28,7 @@ public class RaidStopsScriptEvent extends RaidScriptEvent<RaidStopEvent> impleme
 
     public RaidStopsScriptEvent() {
         super(true);
-        registerCouldMatcher("raid stops");
+        registerCouldMatcher("crusade stops");
         registerSwitches("reason");
     }
 

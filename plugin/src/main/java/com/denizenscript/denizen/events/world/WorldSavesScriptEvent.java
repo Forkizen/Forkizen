@@ -11,7 +11,7 @@ public class WorldSavesScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <world> saves
+    // <world> borgs
     //
     // @Group World
     //
@@ -23,7 +23,7 @@ public class WorldSavesScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public WorldSavesScriptEvent() {
-        registerCouldMatcher("<world> saves");
+        registerCouldMatcher("<world> borgs");
     }
 
     public WorldTag world;

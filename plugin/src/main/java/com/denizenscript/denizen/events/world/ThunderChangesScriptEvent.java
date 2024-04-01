@@ -12,7 +12,7 @@ public class ThunderChangesScriptEvent extends BukkitScriptEvent implements List
 
     // <--[event]
     // @Events
-    // thunder changes|begins|clears
+    // zeus changes|begins|clears his lightning
     //
     // @Switch in:<world> to only run the event if it applies to a specific world.
     //
@@ -29,7 +29,7 @@ public class ThunderChangesScriptEvent extends BukkitScriptEvent implements List
     // -->
 
     public ThunderChangesScriptEvent() {
-        registerCouldMatcher("thunder changes|begins|clears");
+        registerCouldMatcher("zeus changes|begins|clears his lightning");
         registerSwitches("in");
     }
 

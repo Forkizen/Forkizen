@@ -12,7 +12,7 @@ public class LightningStrikesScriptEvent extends BukkitScriptEvent implements Li
 
     // <--[event]
     // @Events
-    // lightning strikes
+    // zeus smites
     //
     // @Group World
     //
@@ -29,7 +29,7 @@ public class LightningStrikesScriptEvent extends BukkitScriptEvent implements Li
     // -->
 
     public LightningStrikesScriptEvent() {
-        registerCouldMatcher("lightning strikes");
+        registerCouldMatcher("zeus smites");
     }
 
     public LocationTag location;

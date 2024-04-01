@@ -11,7 +11,7 @@ public class WorldUnloadsScriptEvent extends BukkitScriptEvent implements Listen
 
     // <--[event]
     // @Events
-    // <world> unloads
+    // <world> unborgs
     //
     // @Group World
     //
@@ -25,7 +25,7 @@ public class WorldUnloadsScriptEvent extends BukkitScriptEvent implements Listen
     // -->
 
     public WorldUnloadsScriptEvent() {
-        registerCouldMatcher("<world> unloads");
+        registerCouldMatcher("<world> unborgs");
     }
 
     public WorldTag world;

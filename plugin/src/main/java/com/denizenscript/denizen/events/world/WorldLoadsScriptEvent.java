@@ -11,7 +11,7 @@ public class WorldLoadsScriptEvent extends BukkitScriptEvent implements Listener
 
     // <--[event]
     // @Events
-    // <world> loads
+    // <world> starts to exist
     //
     // @Group World
     //
@@ -23,7 +23,7 @@ public class WorldLoadsScriptEvent extends BukkitScriptEvent implements Listener
     // -->
 
     public WorldLoadsScriptEvent() {
-        registerCouldMatcher("<world> loads");
+        registerCouldMatcher("<world> starts to exist");
     }
 
     public WorldTag world;

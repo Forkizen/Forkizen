@@ -8,7 +8,7 @@ public class ServerPrestartScriptEvent extends BukkitScriptEvent {
 
     // <--[event]
     // @Events
-    // server prestart
+    // server prebirth
     //
     // @Group Server
     //
@@ -24,7 +24,7 @@ public class ServerPrestartScriptEvent extends BukkitScriptEvent {
 
     public ServerPrestartScriptEvent() {
         instance = this;
-        registerCouldMatcher("server prestart");
+        registerCouldMatcher("server prebirth");
     }
 
     public static ServerPrestartScriptEvent instance;

@@ -16,7 +16,7 @@ public class PortalCreateScriptEvent extends BukkitScriptEvent implements Listen
 
     // <--[event]
     // @Events
-    // portal created (because <'reason'>)
+    // aether portal created (because <'reason'>)
     //
     // @Group World
     //
@@ -35,7 +35,7 @@ public class PortalCreateScriptEvent extends BukkitScriptEvent implements Listen
     // -->
 
     public PortalCreateScriptEvent() {
-        registerCouldMatcher("portal created (because <'reason'>)");
+        registerCouldMatcher("aether portal created (because <'reason'>)");
     }
 
     public ElementTag reason;
@@ -43,7 +43,7 @@ public class PortalCreateScriptEvent extends BukkitScriptEvent implements Listen
 
     @Override
     public boolean matches(ScriptPath path) {
-        if (path.eventArgLowerAt(2).equals("because") && !runGenericCheck(path.eventArgLowerAt(3), reason.asString())) {
+        if (path.eventArgLowerAt(3).equals("because") && !runGenericCheck(path.eventArgLowerAt(4), reason.asString())) {
             return false;
         }
         if (!runInCheck(path, event.getBlocks().get(0).getLocation())) {
