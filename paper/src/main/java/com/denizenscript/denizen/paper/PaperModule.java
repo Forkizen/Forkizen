@@ -45,9 +45,13 @@ public class PaperModule {
         ScriptEvent.registerScriptEvent(ExperienceOrbMergeScriptEvent.class);
         ScriptEvent.registerScriptEvent(PlayerAbsorbsExperienceScriptEvent.class);
         ScriptEvent.registerScriptEvent(PlayerBeaconEffectScriptEvent.class);
+        if (NMSHandler.getVersion().isAtLeast(NMSVersion.v1_18)) {
+            ScriptEvent.registerScriptEvent(PlayerChangesFramedItemScriptEvent.class);
+        }
         ScriptEvent.registerScriptEvent(PlayerChoosesArrowScriptEvent.class);
         ScriptEvent.registerScriptEvent(PlayerClicksFakeEntityScriptEvent.class);
         ScriptEvent.registerScriptEvent(PlayerClicksInRecipeBookScriptEvent.class);
+        ScriptEvent.registerScriptEvent(PlayerClientOptionsChangeScriptEvent.class);
         ScriptEvent.registerScriptEvent(PlayerCompletesAdvancementScriptEventPaperImpl.class);
         ScriptEvent.registerScriptEvent(PlayerDeepSleepScriptEvent.class);
         ScriptEvent.registerScriptEvent(PlayerElytraBoostScriptEvent.class);
@@ -79,6 +83,7 @@ public class PaperModule {
         ScriptEvent.registerScriptEvent(ServerListPingScriptEventPaperImpl.class);
         ScriptEvent.registerScriptEvent(ServerResourcesReloadedScriptEvent.class);
         ScriptEvent.registerScriptEvent(SkeletonHorseTrapScriptEvent.class);
+        ScriptEvent.registerScriptEvent(TargetBlockHitScriptEvent.class);
         if (NMSHandler.getVersion().isAtMost(NMSVersion.v1_18)) {
             ScriptEvent.registerScriptEvent(TNTPrimesScriptEvent.class);
         }

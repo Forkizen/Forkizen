@@ -1568,7 +1568,7 @@ public class EntityTag implements ObjectTag, Adjustable, EntityFormObject, Flagg
         // @description
         // Returns the location of the block the entity is looking at.
         // Optionally, specify a maximum range to find the location from (defaults to 200).
-        // This uses logic equivalent to <@link tag LocationTag.precise_cursor_on_block[(range)]>.
+        // This uses logic equivalent to <@link tag LocationTag.precise_cursor_on_block>.
         // Note that this will return null if there is no block in range.
         // This uses all blocks, ie it includes passable blocks like tall-grass and water. Use <@link tag EntityTag.cursor_on_solid> to exclude passable blocks.
         // Equivalent to <EntityTag.eye_location.ray_trace[return=block;fluids=true;nonsolids=true]>
@@ -1959,12 +1959,16 @@ public class EntityTag implements ObjectTag, Adjustable, EntityFormObject, Flagg
         // @mechanism EntityTag.force_no_persist
         // @description
         // Returns 'true' if the entity is forced to not save to file when chunks unload.
-        // Returns 'false' if not forced to not-save. May return 'false' even for entities that don't save for other reasons.
+        // Returns 'false' if not forced to not-save (ie is allowed to save). May return 'false' even for entities that don't save for other reasons.
         // This is a custom value added in Bukkit to block saving, which is not the same as Mojang's similar option under <@link tag EntityTag.is_persistent>.
         // -->
         registerSpawnedOnlyTag(ElementTag.class, "force_no_persist", (attribute, object) -> {
+            return new ElementTag(!object.getBukkitEntity().isPersistent());
+        });
+        registerSpawnedOnlyTag(ElementTag.class, "forced_no_persist", (attribute, object) -> {
+            BukkitImplDeprecations.forcedNoPersist.warn(attribute.context);
             return new ElementTag(object.getBukkitEntity().isPersistent());
-        }, "forced_no_persist");
+        });
 
         // <--[tag]
         // @attribute <EntityTag.is_collidable>
@@ -2156,7 +2160,7 @@ public class EntityTag implements ObjectTag, Adjustable, EntityFormObject, Flagg
             if (attribute.startsWith("type", 2) && attribute.hasContext(2)) {
                 attribute.fulfill(1);
                 String matcher = attribute.getParam();
-                requirement = (e) -> !e.equals(object.getBukkitEntity()) && new EntityTag(e).tryAdvancedMatcher(matcher);
+                requirement = (e) -> !e.equals(object.getBukkitEntity()) && new EntityTag(e).tryAdvancedMatcher(matcher, attribute.context);
             }
             else {
                 requirement = (e) -> !e.equals(object.getBukkitEntity());
@@ -2192,7 +2196,7 @@ public class EntityTag implements ObjectTag, Adjustable, EntityFormObject, Flagg
             if (attribute.startsWith("type", 2) && attribute.hasContext(2)) {
                 attribute.fulfill(1);
                 String matcher = attribute.getParam();
-                requirement = (e) -> !e.equals(object.getBukkitEntity()) && new EntityTag(e).tryAdvancedMatcher(matcher);
+                requirement = (e) -> !e.equals(object.getBukkitEntity()) && new EntityTag(e).tryAdvancedMatcher(matcher, attribute.context);
             }
             else {
                 requirement = (e) -> !e.equals(object.getBukkitEntity());
@@ -2484,10 +2488,8 @@ public class EntityTag implements ObjectTag, Adjustable, EntityFormObject, Flagg
         // @group properties
         // @description
         // Returns the amount of damage the entity will do based on its held item.
-        // Optionally, specify a target entity to test how much damage will be done to that specific target
-        // (modified based on enchantments and that entity's armor/status/etc).
-        // Note that the result will not always be completely exact, as it doesn't take into account some specific factors
-        // (eg sweeping vs single-hit, etc).
+        // Optionally, specify a target entity to test how much damage will be done to that specific target (modified based on enchantments and that entity's armor/status/etc).
+        // Note that the result will not always be completely exact, as it doesn't take into account some specific factors (eg sweeping vs single-hit, etc).
         // -->
         registerSpawnedOnlyTag(ElementTag.class, "weapon_damage", (attribute, object) -> {
             Entity target = null;
@@ -2642,7 +2644,7 @@ public class EntityTag implements ObjectTag, Adjustable, EntityFormObject, Flagg
             }
             String matcher = attribute.getParam();
             for (ItemStack item : object.getLivingEntity().getEquipment().getArmorContents()) {
-                if (new ItemTag(item).tryAdvancedMatcher(matcher)) {
+                if (new ItemTag(item).tryAdvancedMatcher(matcher, attribute.context)) {
                     return new ElementTag(true);
                 }
             }
@@ -3889,6 +3891,10 @@ public class EntityTag implements ObjectTag, Adjustable, EntityFormObject, Flagg
         // Makes a player-type entity interact with a block.
         // -->
         if (mechanism.matches("interact_with") && mechanism.requireObject(LocationTag.class)) {
+            if (!isPlayer()) {
+                mechanism.echoError("Only player-type entities can interact with blocks!");
+                return;
+            }
             LocationTag interactLocation = mechanism.valueAsType(LocationTag.class);
             NMSHandler.entityHelper.forceInteraction(getPlayer(), interactLocation);
         }
@@ -4576,7 +4582,7 @@ public class EntityTag implements ObjectTag, Adjustable, EntityFormObject, Flagg
     }
 
     @Override
-    public boolean advancedMatches(String text) {
+    public boolean advancedMatches(String text, TagContext context) {
         ScriptEvent.MatchHelper matcher = ScriptEvent.createMatcher(text);
         if (isCitizensNPC()) {
             return matcher.doesMatch("npc", this::tryExactMatcher);
